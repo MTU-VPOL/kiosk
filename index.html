@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Keweenaw Towns & Cities - Houghton and Hancock</title>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        ion-card {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px; /* Rounded corners for a nicer look */
+            height: 400px; /* Fixed height for demonstration */
+        }
+
+        .zooming-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .zooming-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoom-in-out 20s ease-in-out infinite;
+        }
+
+        @keyframes zoom-in-out {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+
+        ion-card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        ion-card-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #b0b0b0;
+        }
+
+        ion-card-content {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <ion-app>
+        <ion-content class="ion-padding">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-card onclick="window.open('https://mtu-vpol.github.io/campusviewer','_self')">
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="campus.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>MTU Historic Campus Building Explorer</ion-card-title>
+                                    <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                                </ion-card-header>
+                                <ion-card-content>
+                                    Here's a small text description for the card content. Nothing more, nothing less.
+                                </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col>
+                        <ion-card onclick="window.open('https://mtu-vpol.github.io/cchihoughon','_self')" >
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="houghton.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>Keweenaw Towns & Cities: Houghton and Hancock</ion-card-title>
+                                  <!--   <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                                </ion-card-header>
+                                <ion-card-content>
+                                    Here's a small text description for the card content. Nothing more, nothing less.
+                                </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col>
+                        <ion-card>
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>Ghost Towns of the Keweenaw</ion-card-title>
+                                   <!--  <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                                </ion-card-header>
+                                <ion-card-content>
+                                    Here's a small text description for the card content. Nothing more, nothing less.
+                                </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+</body>
+</html>
