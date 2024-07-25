@@ -11,10 +11,9 @@
     <title>Keweenaw Towns & Cities - Houghton and Hancock</title>
 
     <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+
+        :root {
+            --ion-background-color: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);;
         }
 
         ion-card {
@@ -76,10 +75,29 @@
         ion-card-content {
             font-size: 1em;
         }
+
+        ion-header {
+            --background: rgba(0, 0, 0, 0.6);
+            height: 80px; /* Extra height for the navbar */
+        }
+
+        ion-toolbar {
+            --min-height: 80px; /* Extra height for the toolbar */
+            --background: rgba(0, 0, 0, 0.6);
+        }
+
+        ion-title {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <ion-app>
+         <ion-header>
+            <ion-toolbar>
+                <ion-title>VPOL Kiosk</ion-title>
+            </ion-toolbar>
+        </ion-header>
         <ion-content class="ion-padding">
             <ion-grid>
                 <ion-row>
