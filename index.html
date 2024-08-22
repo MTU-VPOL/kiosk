@@ -95,6 +95,31 @@
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 9999999;
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+
+        .pulse {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 150, 255, 0.5);
+            transform: scale(0);
+            animation: pulse-animation 0.6s ease-out;
+        }
+
+        @keyframes pulse-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+         #animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 9999;
             pointer-events: none; /* Allow clicks to pass through */
         }
@@ -167,7 +192,7 @@
         <ion-header>
             <ion-toolbar>
                  <ion-buttons slot="start">
-                    <ion-img src="vpoldark.jpg" style="width: 60px; height: 60px;"></ion-img>
+                    <ion-img src="vpol_new.png" style="width: 60px; height: 60px;"></ion-img>
                 </ion-buttons>  
                 <ion-title>A Touch of the Past: Digital Humanities at the Van Pelt and Opie Library</ion-title>
             </ion-toolbar>
