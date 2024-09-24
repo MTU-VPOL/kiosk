@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,34 +88,11 @@
 
         ion-title {
             color: #ffffff;
+            font-size: 30px;
+            font-family: 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif;
         }
 
         #animation-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999999;
-            pointer-events: none; /* Allow clicks to pass through */
-        }
-
-        .pulse {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(0, 150, 255, 0.5);
-            transform: scale(0);
-            animation: pulse-animation 0.6s ease-out;
-        }
-
-        @keyframes pulse-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-         #animation-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -192,9 +170,9 @@
         <ion-header>
             <ion-toolbar>
                  <ion-buttons slot="start">
-                    <ion-img src="vpol_new.png" style="width: 60px; height: 60px;"></ion-img>
+                    <ion-img src="huskywhite.svg" style="width: 60px; height: 60px;"></ion-img>
                 </ion-buttons>  
-                <ion-title>A Touch of the Past: Digital Humanities at the Van Pelt and Opie Library</ion-title>
+                <ion-title><span style="color: #89cff0">Digital</span> <span style="color: #bf2b52"> Scholarship</span> @ <b>VPOL</b></ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
@@ -241,6 +219,52 @@
                                 </ion-card-header>
                                 <ion-card-content>
                                     The Keweenaw has many ghost towns, discover them here through maps and images.
+                                </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-xs="12" size-md="4">
+                        <ion-card onclick="window.open('https://mtu-vpol.github.io/campusviewer','_self')">
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="miners.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>Menominee Iron Range: Mining & Miners</ion-card-title>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    By 1955 a total of 162,621,749 tons of iron ore had been shipped from this Michigan portion of Iron ranges. Who were the miners?
+                                </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col size-xs="12" size-md="4">
+                        <ion-card onclick="window.open('https://mtu-vpol.github.io/studentlocs','_self')">
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="students.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>Where Do Huskies Come From?</ion-card-title>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    See where MTU's students are from. Add your own location to the map! </ion-card-content>
+                            </div>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col size-xs="12" size-md="4">
+                        <ion-card onclick="window.open('https://mtu-vpol.github.io/ghosttowns','_self')">
+                            <div class="zooming-image">
+                                <img alt="Silhouette of mountains" src="buildings.png">
+                            </div>
+                            <div class="card-content">
+                                <ion-card-header>
+                                    <ion-card-title>1909 Calumet Building Explorer</ion-card-title>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    Explore historical buildings of Calumet, Michigan in 1909.
                                 </ion-card-content>
                             </div>
                         </ion-card>
